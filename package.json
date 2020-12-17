@@ -1,6 +1,6 @@
 {
   "name": "webex-custom-toolbox-ui",
-  "version": "2020.12.2-4",
+  "version": "2020.12.17",
   "description": "UI for the dCloud Custom Stack 1 Webex Instant Demo Toolbox",
   "author": "Coty Condry <ccondry@cisco.com>",
   "main": "dist/js/index.common.js",
