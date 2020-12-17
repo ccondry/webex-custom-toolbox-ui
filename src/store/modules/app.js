@@ -73,12 +73,13 @@ const actions = {
     options = {},
     mutation,
     message,
-    showNotification = true
+    showNotification = true,
+    transform
   }) {
-    if (!url) {
-      throw Error('url is a required parameter for fetch')
-    }
     message = message || `${options.method === 'POST' ? 'save' : 'get'} ${group} ${type}`
+    if (!url) {
+      throw Error('url is a required parameter for fetch ' + message)
+    }
     console.log(`${message}...`)
     const loadingOrWorking = !options.method || options.method === 'GET' ? 'setLoading' : 'setWorking'
     dispatch(loadingOrWorking, {group, type, value: true})
@@ -110,9 +111,14 @@ const actions = {
           // parse response text into JSON
           const json = JSON.parse(text)
           console.log(`${message} success:`, json)
-          if (mutation) {
-            // put JSON data into state
-            commit(mutation, json)
+          if (typeof mutation === 'string') {
+            if (typeof transform === 'function') {
+              // put transformed JSON data into state
+              commit(mutation, transform(json))
+            } else {
+              // put JSON data into state
+              commit(mutation, json)
+            }
           }
           return json
         } catch (e) {
