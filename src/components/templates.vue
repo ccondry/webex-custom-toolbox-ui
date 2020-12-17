@@ -66,7 +66,7 @@
     style="display: flex; justify-content: flex-end; margin-top: 1rem; margin-bottom: 0.25rem;"
     >
       <b-button
-      type="is-success"
+      type="is-primary"
       rounded
       @click="clickSaveCurrent"
       >
