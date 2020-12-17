@@ -100,6 +100,8 @@ const actions = {
       window.localStorage.setItem('jwt', jwt)
       // get demo config
       dispatch('getUser')
+      // get user templates
+      dispatch('getTemplates')
     } catch (e) {
       // parseJwt failed - delete this invalid JWT
       dispatch('unsetJwt')
@@ -145,6 +147,26 @@ const actions = {
     } else {
       // no JWT found - make the user log in
       dispatch('login')
+    }
+  },
+  async saveDemoConfig ({dispatch, getters}, body) {
+    const response = await dispatch('fetch', {
+      group: 'user',
+      type: 'demoConfig',
+      url: getters.endpoints.userDemoConfig,
+      message: 'save demo configuration',
+      showNotification: true,
+      options: {
+        method: 'POST',
+        query: {
+          demo: 'webex-custom'
+        },
+        body
+      }
+    })
+    if (!(response instanceof Error)) {
+      // refresh user config data
+      dispatch('getUser')
     }
   }
 }

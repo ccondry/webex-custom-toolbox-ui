@@ -59,13 +59,16 @@ export default {
     this.checkJwt()
     // get the REST API version
     this.getApiVersion()
+    // get verticals list
+    this.getVerticals()
   },
 
   methods: {
     ...mapActions([
       'checkJwt',
       'getApiVersion',
-      'login'
+      'login',
+      'getVerticals'
     ]),
     clickAdmin () {
       // navigate user to the toolbox management website

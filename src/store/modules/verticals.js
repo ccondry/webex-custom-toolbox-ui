@@ -15,8 +15,8 @@ const getters = {
 }
 
 const actions = {
-  async getUser ({dispatch, getters}) {
-    await dispatch('fetch', {
+  getVerticals ({dispatch, getters}) {
+    dispatch('fetch', {
       group: 'vertical',
       type: 'list',
       url: getters.endpoints.vertical,

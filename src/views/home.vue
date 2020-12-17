@@ -3,8 +3,14 @@
     <!-- welcome -->
     <welcome />
 
+    <!-- demo website -->
+    <demo-website />
+
     <!-- my config -->
     <my-config />
+
+    <!-- templates -->
+    <templates />
 
     <!-- debug -->
     <!-- <debug /> -->
@@ -20,13 +26,17 @@ import Welcome from '../components/welcome'
 // import Debug from '../components/debug'
 import AppFooter from '../components/app-footer'
 import MyConfig from '../components/my-config'
+import Templates from '../components/templates'
+import DemoWebsite from '../components/demo-website'
 
 export default {
   components: {
     Welcome,
     // Debug,
     AppFooter,
-    MyConfig
+    MyConfig,
+    Templates,
+    DemoWebsite
   },
 
   computed: {

@@ -73,7 +73,7 @@ const actions = {
     options = {},
     mutation,
     message,
-    showNotification = true,
+    showNotification = false,
     transform
   }) {
     message = message || `${options.method === 'POST' ? 'save' : 'get'} ${group} ${type}`
@@ -107,6 +107,13 @@ const actions = {
       const text = await response.text()
       // response code 200 - 299?
       if (response.ok) {
+        if (showNotification) {
+          Toast.open({
+            message: `${message} successful`,
+            type: 'is-success',
+            duration: 6 * 1000
+          })
+        }
         try {
           // parse response text into JSON
           const json = JSON.parse(text)
@@ -161,17 +168,21 @@ const actions = {
       error.status = response.status
       error.statusText = response.statusText
       error.text = m
+      Toast.open({
+        message: `Failed to ${message}: ${errorMessage}`,
+        type: 'is-danger',
+        duration: 12 * 1000,
+        queue: false
+      })
       return error
     } catch (e) {
       console.error(`${message} failed: ${e.message}`)
-      if (showNotification) {
-        Toast.open({
-          message: `Failed to ${message}: ${e.message}`,
-          type: 'is-danger',
-          duration: 6 * 1000,
-          queue: false
-        })
-      }
+      Toast.open({
+        message: `Failed to ${message}: ${e.message}`,
+        type: 'is-danger',
+        duration: 6 * 1000,
+        queue: false
+      })
     } finally {
       dispatch(loadingOrWorking, {group, type, value: false})
     }

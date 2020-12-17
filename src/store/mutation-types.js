@@ -13,3 +13,9 @@ export const SET_PROVISION_STATUS = 'SET_PROVISION_STATUS'
 
 // user demo config
 export const SET_USER = 'SET_USER'
+
+// verticals list
+export const SET_VERTICALS = 'SET_VERTICALS'
+
+// templates list
+export const SET_TEMPLATES = 'SET_TEMPLATES'

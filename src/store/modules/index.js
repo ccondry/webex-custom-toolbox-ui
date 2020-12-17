@@ -4,6 +4,7 @@ import endpoints from './endpoints'
 import webex from './webex'
 import verticals from './verticals'
 import provision from './provision'
+import templates from './templates'
 
 export default {
   app,
@@ -11,5 +12,6 @@ export default {
   endpoints,
   webex,
   verticals,
-  provision
+  provision,
+  templates
 }

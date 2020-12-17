@@ -14,7 +14,9 @@ const getters = {
       version: authUrlBase + '/version',
       logout: authUrlBase + '/logout',
       vertical: 'https://mm.cxdemo.net/api/v1/verticals',
-      user: authUrlBase + '/user'
+      user: authUrlBase + '/user',
+      userDemoConfig: authUrlBase + '/user/demo',
+      template: authUrlBase + '/template/webex-custom'
     }
   },
   defaultRestOptions: (state, getters) => {

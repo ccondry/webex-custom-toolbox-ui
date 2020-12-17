@@ -117,3 +117,21 @@ section.main {
 section.main > div {
   // padding-bottom: 1rem;
 }
+
+// fix buefy switch in b-field with floating label
+.field.is-floating-label .switch, .field.is-floating-in-label .switch {
+  padding-top: 1rem;
+  padding-left: 0.6rem;
+}
+
+// fix buefy checkbox in b-field with floating label
+.field.is-floating-label .checkbox, .field.is-floating-in-label .checkbox {
+  padding-top: 1rem;
+  padding-left: 0.6rem;
+}
+
+// fix text in b-field with floating label
+.field.is-floating-label .control div {
+  padding: 0.6rem;
+  padding-bottom: 0.2rem;
+}
