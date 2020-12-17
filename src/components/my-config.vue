@@ -12,7 +12,7 @@
         rounded
         @click="clickCreateTemplate"
         >
-          Create New Template
+          Save As New Template
         </b-button>
 
         <b-button
