@@ -4,6 +4,13 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2020.12.17-1
+
+### Features
+* **Current Config:** Update button text
+* **Templates:** Update button color to match Current Config
+
+
 # 2020.12.17
 
 ### Features
