@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.1.5
+
+### Features
+* **Current Config:** Add Destination Email Address config field
+
+
 # 2020.12.17-1
 
 ### Features
