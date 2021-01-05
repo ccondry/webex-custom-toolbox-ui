@@ -49,6 +49,7 @@ export default {
       //   "orgId": "fbec4c81-3185-4614-9ba9-77d17c134b01",
       //   "templateId": "d705a7e0-5996-11ea-862b-05baf101fe3f",
       //   "phone": "+12142336226"
+      //   "email": "test123@gmail.com"
       // }
       mutableModel: {}
     }

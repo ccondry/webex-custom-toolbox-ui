@@ -50,6 +50,11 @@
     <b-field label="Phone Number" label-position="on-border">
       <b-input v-model="model.phone" />
     </b-field>
+
+    <!-- email -->
+    <b-field label="Destination Email Address" label-position="on-border">
+      <b-input v-model="model.email" />
+    </b-field>
   </div>
 </template>
 
