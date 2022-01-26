@@ -16,6 +16,11 @@
       </b-select>
     </b-field>
 
+    <!-- IMI Connect ID -->
+    <b-field label="IMI Connect ID" label-position="on-border">
+      <b-checkbox v-model="model.imiConnectId" />
+    </b-field>
+
     <!-- async -->
     <b-field label="Async" label-position="on-border">
       <b-checkbox v-model="model.async" />
