@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2022.1.26
+
+### Features
+* **Current Config:** Add IMI Connect ID config field.
+
+
 # 2021.1.5
 
 ### Features
