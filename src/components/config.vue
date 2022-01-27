@@ -18,7 +18,7 @@
 
     <!-- IMI Connect ID -->
     <b-field label="IMI Connect ID" label-position="on-border">
-      <b-checkbox v-model="model.imiConnectId" />
+      <b-input v-model="model.imiConnectId" />
     </b-field>
 
     <!-- async -->
